@@ -32,7 +32,7 @@ export default {
           }
 
           await fetch(
-            `https://abstract.land/kahoot/rest/challenges/${
+            `https://kahoot.it/rest/challenges/${
               this.details.challengeId
             }/join/?nickname=${encodeURIComponent(this.username)}`,
             {
