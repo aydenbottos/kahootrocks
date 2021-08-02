@@ -37,7 +37,7 @@ export default {
   mounted() {
 
     this.loadConfig();
-    fetch("https://abstract.land/kahoot/rest/kahoots")
+    fetch("https://kahoot.it/rest/kahoots")
       .then((res) => {
         if (res.status !== 200) throw new Error("oops");
       })
