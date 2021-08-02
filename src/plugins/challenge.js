@@ -77,7 +77,7 @@ export default {
           return new Promise(async (resolve) => {
             this.kahoot.questions[index].progress = 0;
             await fetch(
-              `https://abstract.land/kahoot/rest/challenges/${this.playerDetails.challenge.challengeId}/progress/?upToQuestion=${index}`
+              `https://kahoot.it/rest/challenges/${this.playerDetails.challenge.challengeId}/progress/?upToQuestion=${index}`
             );
             let answerDelay = Math.abs(
               Math.ceil(
@@ -171,7 +171,7 @@ export default {
             setTimeout(() => {
               resolve(
                 fetch(
-                  `https://abstract.land/kahoot/rest/challenges/${this.details.challengeId}/answers`,
+                  `https://kahoot.it/rest/challenges/${this.details.challengeId}/answers`,
                   {
                     method: "post",
                     headers: {
