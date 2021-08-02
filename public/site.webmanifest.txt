@@ -50,6 +50,6 @@
     ],
     "theme_color": "#101010",
     "background_color": "#121212",
-    "start_url": "https://kahoot.rocks",
+    "start_url": "https://kahootrocks.herokuapp.com",
     "display": "standalone"
 }
