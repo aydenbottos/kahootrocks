@@ -30,7 +30,7 @@ export default {
 
           if (isUuid) {
             fetch(
-              `https://abstract.land/kahoot/rest/kahoots/${this.quizName}`
+              `https://kahoot.it/rest/kahoots/${this.quizName}`
             )
               .then((res) => res.json())
               .then((body) => {
@@ -48,7 +48,7 @@ export default {
                 amount -= 100
               ) {
                 body = await fetch(
-                  `https://abstract.land/kahoot/rest/kahoots/?query=${encodeURIComponent(
+                  `https://kahoot.it/rest/kahoots/?query=${encodeURIComponent(
                     this.quizName
                   )}&limit=100&cursor=${cursorPos}&includeKahoot=true`
                 ).then((res) => res.json());
@@ -70,7 +70,7 @@ export default {
                 }
               }
               let body = await fetch(
-                `https://abstract.land/kahoot/rest/kahoots/?query=${encodeURIComponent(
+                `https://kahoot.it/rest/kahoots/?query=${encodeURIComponent(
                   this.quizName
                 )}&limit=${amount}&cursor=${cursorPos}&includeKahoot=true`
               ).then((res) => res.json());
@@ -78,7 +78,7 @@ export default {
               this.rawKahoots = rawKahoots;
             } else {
               await fetch(
-                `https://abstract.land/kahoot/rest/kahoots/?query=${encodeURIComponent(
+                `https://kahoot.it/rest/kahoots/?query=${encodeURIComponent(
                   this.quizName
                 )}&limit=${
                   this.$globals.options.kahootSearchAmount
