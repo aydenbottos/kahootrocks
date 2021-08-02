@@ -1,7 +1,7 @@
 export default function(pin) {
   return new Promise((resolve, reject) => {
     fetch(
-      `https://abstract.land/kahoot/reserve/session/${pin}/?${Date.now()}`,
+      `https://kahoot.it/reserve/session/${pin}/?${Date.now()}`,
       {
         headers: {
           "user-agent": navigator.userAgent,
