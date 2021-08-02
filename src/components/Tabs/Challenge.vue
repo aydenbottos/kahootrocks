@@ -310,7 +310,7 @@ export default {
             )[0];
             id = [
               await fetch(
-                `https://abstract.land/kahoot/rest/challenges/pin/${pin}`
+                `https://kahoot.it/rest/challenges/pin/${pin}`
               )
                 .then((res) => res.json())
                 .then((body) => body.challenge.challengeId)
@@ -322,7 +322,7 @@ export default {
             break;
           }
           this.details = await fetch(
-            `https://abstract.land/kahoot/rest/challenges/${id[0]}?includeKahoot=true`
+            `https://kahoot.it/rest/challenges/${id[0]}?includeKahoot=true`
           )
             .then((res) => res.json())
             .catch((e) => e);
@@ -354,7 +354,7 @@ export default {
           )
             break;
           await fetch(
-            `https://abstract.land/kahoot/apis/profanities/nickname/${encodeURIComponent(
+            `https://apis.kahoot.it/profanities/nickname/${encodeURIComponent(
               this.$challenge.username
             )}`
           )
@@ -422,7 +422,7 @@ export default {
     },
     async ResetAnswers() {
       this.details = await fetch(
-        `https://abstract.land/kahoot/rest/challenges/${this.$challenge.details.challengeId}?includeKahoot=true`
+        `https://kahoot.it/rest/challenges/${this.$challenge.details.challengeId}?includeKahoot=true`
       )
         .then((res) => res.json())
         .catch((e) => e);
