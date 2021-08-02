@@ -4,7 +4,7 @@
     <div v-else class="text-center d-flex" style="height: 100vh">
       <span class="ma-auto"
         >This is an unnoficial version of kahoot.rocks. Please use the official
-        version at https://kahoot.rocks</span
+        version at https://kahootrocks.herokuapp.com</span
       >
     </div>
   </v-app>
@@ -35,11 +35,6 @@ export default {
     },
   },
   mounted() {
-    if (location.origin === "https://kahoot.rocks")
-      location.href = location.href.replace(
-        "https://kahoot.rocks",
-        "https://kahoot.club"
-      );
 
     this.loadConfig();
     fetch("https://abstract.land/kahoot/rest/kahoots")
